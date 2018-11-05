@@ -5,6 +5,8 @@ Graph-Search Algorithm using A* SEARCH
 By- Asim Satti
 """
 
+import sys
+
 class tree:
     class node:
         def __init__(self,data = None):
@@ -167,25 +169,25 @@ class tree:
             manhattanDistanceCosts.append(wrong)
 
         else:
-            manhattanDistanceCosts.append(-1)
+            manhattanDistanceCosts.append(sys.maxint)
         if(self.current.up is not None):
             wrong = self.current.up.level + self.current.up.getIncorrect()
             manhattanDistanceCosts.append(wrong)
 
         else:
-            manhattanDistanceCosts.append(-1)
+            manhattanDistanceCosts.append(sys.maxint)
         if(self.current.right is not None):
             wrong = self.current.right.level + self.current.right.getIncorrect()
             manhattanDistanceCosts.append(wrong)
 
         else:
-            manhattanDistanceCosts.append(-1)
+            manhattanDistanceCosts.append(sys.maxint)
         if(self.current.down is not None):
             wrong = self.current.down.level + self.current.down.getIncorrect()
             manhattanDistanceCosts.append(wrong)
 
         else:
-            manhattanDistanceCosts.append(-1)
+            manhattanDistanceCosts.append(sys.maxint)
         
        
         #Each keeps track of which child then cheapest
